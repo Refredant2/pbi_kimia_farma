@@ -1,0 +1,5 @@
+CREATE TABLE Kimia_farma.kf_analisa3 as 
+SELECT ft.transaction_id, ft.date, ft.branch_id, kc.branch_name, kc.kota, kc.provinsi
+FROM Kimia_farma.kf_final_transaction as ft
+LEFT JOIN Kimia_farma.kf_kantor_cabang as kc
+ON ft.branch_id = kc.branch_id;
